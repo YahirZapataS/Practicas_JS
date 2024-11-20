@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Promejoras - UV</title>
+</head>
+<body>
+    <h2>Calulando promejoras</h2>
+    <script>
+        alert("Hola\n Bienvenido, por favor sigue las instrucciones para calcular el coste de tu inscripcion.")
+        var name;
+        name = prompt("Ingresa tu nombre");
+        var nivelAcademico;
+        nivelAcademico = prompt("¿Que nivel estás cursando?\n1. Primero\n2.Tercero\n3. Quinto\n4. Septimo");
+        var creditos;
+        creditos = prompt("¿Cuantos creditos piensas tomar este semestre?");
+        const precioxCredito = 360;
+        var costexInscripcion;
+        if(nivelAcademico == 1) {
+            costexInscripcion = 50;
+        }
+        if(nivelAcademico == 2) {
+            costexInscripcion = 75;
+        }
+
+        if(nivelAcademico == 3 || nivelAcademico == 4) {
+            costexInscripcion = 100;
+        }
+
+        if(creditos > 12) {
+            alert("Has tomado " + creditos + " creditos");
+            var totalCreditos = 12 * precioxCredito;
+            var totalInscripcion = totalCreditos + costexInscripcion;
+            alert(name + " tu coste por inscripcion total es de $" + totalInscripcion)
+        } else {
+            alert(name + " has tomado " + creditos + " creditos");
+            totalCreditos = creditos * precioxCredito;
+            totalInscripcion = totalCreditos + costexInscripcion;
+            alert(name + " tu coste por inscripcion total es de $" + totalInscripcion);
+        }
+    </script>
+</body>
+</html>
