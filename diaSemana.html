@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia de la Semana - Yahir Zapata</title>
+</head>
+
+<body>
+    <p>Ejemplo de input - Ingresa un día de la semana:</p>
+    <form name="Sample">
+        <input type="text" name="dayOfWeek" id="dayOfWeek" onchange="updateInput()">
+    </form>
+
+    <script type="text/javascript">
+        function updateInput() {
+            const inputField = document.Sample.dayOfWeek;
+            document.body.style.backgroundColor = "#d1ffd6";
+            inputField.value = "Día ingresado: " + inputField.value;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivino - Yahir Zapata</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding-top: 5%;
+        }
+
+        h1 {
+            color: #1032ae;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .box {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Adivino LIS</h1>
+    <p>Haga clic para predecir su futuro</p>
+
+    <div class="buttons">
+        <button onclick="getPrediction('financial')">Dinero</button>
+        <button onclick="getPrediction('love')">Amor</button>
+        <button onclick="getPrediction('school')">Estudios</button>
+    </div>
+
+    <div class="box" id="predictionBox">
+        Tu predicción aparecerá aquí...
+    </div>
+
+    <script type="text/javascript">
+        function getPrediction(tema) {
+            let prediccion = "";
+            const random = Math.floor(Math.random() * 5) + 1;
+
+            if (tema === 'financial') {
+                switch (random) {
+                    case 1:
+                        prediccion = "¡Vas a ganar la lotería mañana!";
+                        break;
+                    case 2:
+                        prediccion = "¡Una gran oportunidad de negocio llegará pronto a tu vida!";
+                        break;
+                    case 3:
+                        prediccion = "Recibirás una suma inesperada de dinero.";
+                        break;
+                    case 4:
+                        prediccion = "Ten cuidado con las inversiones riesgosas en el futuro cercano.";
+                        break;
+                    case 5:
+                        prediccion = "Tu situación financiera mejorará en el próximo mes.";
+                        break;
+                }
+            } else if (tema === 'love') {
+                switch (random) {
+                    case 1:
+                        prediccion = "¡Conocerás a alguien especial pronto!";
+                        break;
+                    case 2:
+                        prediccion = "Una relación del pasado volverá a tu vida.";
+                        break;
+                    case 3:
+                        prediccion = "El amor está en el aire, ¡espera una nueva conexión!";
+                        break;
+                    case 4:
+                        prediccion = "Vivirás un momento importante en tu relación.";
+                        break;
+                    case 5:
+                        prediccion = "¡Una propuesta sorpresa podría estar en tu futuro!";
+                        break;
+                }
+            } else if (tema === 'school') {
+                switch (random) {
+                    case 1:
+                        prediccion = "¡Vas a aprobar tu próximo examen con facilidad!";
+                        break;
+                    case 2:
+                        prediccion = "Espera recibir reconocimiento por tu arduo trabajo.";
+                        break;
+                    case 3:
+                        prediccion = "Una gran oportunidad de crecimiento académico llegará a tu vida.";
+                        break;
+                    case 4:
+                        prediccion = "¡Superarás cualquier desafío académico que se cruce en tu camino!";
+                        break;
+                    case 5:
+                        prediccion = "Un mentor te guiará hacia el éxito en tus estudios.";
+                        break;
+                }
+            }
+            document.getElementById('predictionBox').textContent = prediccion;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop - Yahir Zapata</title>
+</head>
+
+<body>
+    <!--
+    In the code below we use JavaScript to change the value of the src (source) attribute of an image.
+    -->
+    <p id="demo">Tite!</p>
+    <script>
+        document.getElementById("demo").innerHTML = "feli";
+    </script>
+    <img id="faceImg" src="https://openclipart.org/image/300px/svg_to_png/245849/1459973475.png" alt="Smiley Clem Depit"
+        title="Smiley Clem Depit by  Justin Ternet ( https://openclipart.org/user-detail/Justin Ternet )">
+    <p> <button onclick="stopFace()">Detener</button> </p>
+    <script>
+
+        function changeFace() {
+            if (document.getElementById("demo").innerHTML == "feli") {
+                document.getElementById("demo").innerHTML = "tite";
+                //if (i % 2 == 0)
+                //{
+                document.getElementById('faceImg').src = "https://openclipart.org/image/300px/svg_to_png/245849/1459973475.png";
+                document.getElementById('faceImg').alt = "Smiley Clem Depit";
+                document.getElementById('faceImg').title = "Smiley Clem Depit by  Justin Ternet ( https://openclipart.org/user-detail/Justin Ternet )";
+            }
+            //}
+            else {
+                document.getElementById("demo").innerHTML = "feli";
+                document.getElementById('faceImg').src = "https://openclipart.org/image/300px/svg_to_png/245844/1459972540.png";
+            }
+            // return p1 * p2;              // The function returns the product of p1 and p2
+        }
+
+        //myFunction(3,2);
+        facetime = setInterval(changeFace, 1000);
+        //document.write(x);
+        function stopFace() {
+            clearInterval(facetime);
+        }
+    </script>
+
+</body>
+
+</html>
